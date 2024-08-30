@@ -27,7 +27,7 @@ const GoogleTextInput = ({
                     shadowColor: '#D4D4D4',
                 },
                 textInput:{
-                    backgroundColor: 'white',
+                    backgroundColor: textInputBackgroundColor ? textInputBackgroundColor : 'white',
                     fontSize: 16,
                     fontWeight: '600',
                     marginTop: 5.5,
@@ -35,7 +35,7 @@ const GoogleTextInput = ({
                     borderRadius: 200,
                 },
                 listView: {
-                    backgroundColor: 'white',
+                    backgroundColor: textInputBackgroundColor ? textInputBackgroundColor : 'white',
                     position: 'relative',
                     top: 0,
                     width: '100%',
