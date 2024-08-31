@@ -1,12 +1,11 @@
 import {useUser} from "@clerk/clerk-expo";
 import {Image, Text, View} from "react-native";
-
-import RideLayout from "@/components/RideLayout";
 import {icons} from "@/constants";
 import {formatTime} from "@/lib/utils";
 import {useDriverStore, useLocationStore} from "@/store";
-import CustomButton from "@/components/CustomButton";
+import { StripeProvider } from '@stripe/stripe-react-native';
 import Payment from "@/components/Payment";
+import RideLayout from "@/components/RideLayout";
 
 const BookRide = () => {
     const {user} = useUser();
@@ -18,6 +17,11 @@ const BookRide = () => {
     )[0];
 
     return (
+        <StripeProvider
+            publishableKey={process.env.EXPO_PUBLIC_STRIPE_PUBLISHABLE_KEY!}
+            merchantIdentifier="merchant.fastlane.com" 
+            urlScheme="myapp" 
+        >
         <RideLayout title="Book Ride">
             <>
                 <Text className="text-xl font-JakartaSemiBold mb-3">
@@ -60,7 +64,7 @@ const BookRide = () => {
                     <View className="flex flex-row items-center justify-between w-full border-b border-white py-3">
                         <Text className="text-lg font-JakartaRegular">Pickup Time</Text>
                         <Text className="text-lg font-JakartaRegular">
-                            {formatTime(driverDetails?.time! || 5)}
+                            {formatTime(parseInt(`${driverDetails.time}`))}
                         </Text>
                     </View>
 
@@ -88,9 +92,16 @@ const BookRide = () => {
                         </Text>
                     </View>
                 </View>
-                <Payment />
+                <Payment 
+                    fullName={user?.fullName!}
+                    email={user?.emailAddresses[0].emailAddress!}
+                    amount={driverDetails?.price!}
+                    driverId={driverDetails?.id}
+                    rideTime={driverDetails?.time!}
+                />
             </>
         </RideLayout>
+    </StripeProvider>
     );
 };
 
