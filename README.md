@@ -1,50 +1,115 @@
-# Welcome to your Expo app 👋
+# FastLane
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Welcome to FastLane! This repository contains code for a cab services app, built using React Native, Expo, and other technologies, with backend services managed by Neon and Clerk.
 
-## Get started
+## Table of Contents
 
-1. Install dependencies
+- [Introduction](#introduction)
+- [Features](#features)
+- [Getting Started](#getting-started)
+- [Project Structure](#project-structure)
+- [Technologies Used](#technologies-used)
+- [Clerk Integration](#clerk-integration)
+- [Support](#support)
+- [Badges](#badges)
+
+## Introduction
+
+FastLane is a cab services app where users can book rides, view their ride history, manage profiles, and soon chat with drivers. This application is built using React Native and Expo, with backend services such as authentication, database, and file storage managed by Clerk and Neon.
+## Features
+
+- Ride booking and tracking.
+
+- Ride history management.
+
+- User profile management.
+
+- Authentication and authorization using Clerk.
+
+- Google OAuth integration for seamless login.
+
+- Integration with serverless PostgreSQL for ride data storage using Neon.
+
+- Smooth and responsive user interface with React Native and Expo.
+
+- Utility-first styling with NativeWind.
+
+- Upcoming feature: In-app chat for communication between users and drivers.
+## Getting Started
+
+To get started with the FastLane frontend, follow these steps:
+### Installation
+
+1. Clone this repository:
 
    ```bash
-   npm install
-   ```
+   git clone https://github.com/rr789451/FastLane.git
 
-2. Start the app
+2. Install the required dependencies:
 
-   ```bash
-    npx expo start
-   ```
+    ```bash
+    npm install
 
-In the output, you'll find options to open the app in a
+3. Start the server:
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+    ```bash
+    expo start
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+4. The application will be accessible through the **QR Code** provided in the terminal.
+    
+## Project Structure
 
-## Get a fresh project
+The project follows a common Expo project structure:
 
-When you're ready, run:
+- **app/index.jsx**: Entry point to the app with an onbording screen.
 
-```bash
-npm run reset-project
-```
+- **app/_layout.jsx**: Creates a layout for the application.
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+- **app/(auth)**: Contains the authentication screens for the application.
 
-## Learn more
+- **app/(tabs)**: Individual screens of the app (e.g., Home, Profile, Booking, History).
 
-To learn more about developing your project with Expo, look at the following resources:
+- **assets/**: Images, videos, and other static assets.
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+- **components/**: Reusable UI components used throughout the app.
 
-## Join the community
+- **constants/**: For global usage of static assets.
 
-Join our community of developers creating universal apps.
+- **lib/**: Route definitions for API endpoints.
+## Technologies Used
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- ***React Native***:  Framework for building native apps using React.
+
+- ***Expo***: Platform for developing, building, and deploying React Native apps.
+
+- ***Clerk***: Authentication and user management service, providing seamless integration with Google OAuth.
+
+- ***Neon***: Serverless PostgreSQL for managing ride data.
+
+- ***Expo-Router***: Handles navigation and routing in the app, offering a file-based system that simplifies defining and managing routes in Expo projects.
+
+- ***NativeWind***: Utility-first CSS for React Native, making it easy to style components.
+
+## Clerk Integration
+
+**FastLane** integrates with Clerk for the following functionalities:
+
+- ***Authentication***: User registration, login, session management, and Google OAuth.
+## Support
+
+For support, email rr789451@gmail.com.
+
+
+## Badges
+
+[![Apache License 2.0](https://img.shields.io/badge/License-ApacheLicense2.0-green.svg)](https://choosealicense.com/licenses/apache-2.0/)
+
+[![Expo](https://img.shields.io/badge/Expo-1B1F23?style=for-the-badge&logo=expo&logoColor=white)](https://docs.expo.dev/)
+
+[![React Native](https://img.shields.io/badge/React%20Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactnative.dev/docs/getting-started)
+
+[![NativeWind](https://img.shields.io/badge/NativeWind-000000?style=for-the-badge&logo=wind&logoColor=white)](https://nativewind.dev/)
+
+[![Clerk](https://img.shields.io/badge/Clerk-3F6FF0?logo=clerk&logoColor=white)](https://clerk.dev)
+
+[![Neon](https://img.shields.io/badge/Neon-00A3E0?logo=postgresql&logoColor=white)](https://neon.tech)
