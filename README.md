@@ -36,10 +36,7 @@ FastLane is a cab services app where users can book rides, view their ride histo
 
 - Upcoming feature: In-app chat for communication between users and drivers.
 
-![Onboarding Screen](assets/images/Onboarding.png)
-![Ride Available List Screen](assets/images/Available.png)
-![Ride Information Screen](assets/images/Information.png)
-![My History Screen](assets/images/History.png)
+![Onboarding Screen](assets/images/Onboarding.png)![Ride Available List Screen](assets/images/Available.png)![Ride Information Screen](assets/images/Information.png)![My History Screen](assets/images/History.png)
 
 ## Getting Started
 
